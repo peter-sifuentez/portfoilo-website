@@ -1,0 +1,285 @@
+* {
+  font-family: 'Germania One', cursive;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #d81d25;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+nav {
+  background: #d81d25;
+  height: 80px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 20;
+  padding: 10px;
+  margin: auto;
+  border: auto;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #f4f4f4;
+  text-shadow: #000000 0px 0px 2px;
+  font-size: 25px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #f4f4f4;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+a.active, a:hover {
+  color: #FABD00;
+  transition: .5s;
+}
+
+/*End of Nav
+.homepage {
+  margin: 10px auto 10px auto;
+  padding: 10px auto 10px auto;
+  display: block;
+  width: 100%;
+}*/
+.hp-container {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  border: 15px;
+}
+
+.homepage {
+  height: auto;
+  max-width: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}*/
+.center, .h1 {
+  font-size: 70px;
+  text-shadow: #000000 0px 0px 2px;
+  padding: 8px 8px 8px 8px;
+  font-color: #f4f4f4;
+  background-color: #d81d25;
+  text-decoration: none;
+}
+
+.main-button {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+.open-button:hover button {
+  display: none;
+}
+
+/*Heading*/
+.heading, .h2 {
+  border: 5px ridge #f4f4f4;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 80px;
+  text-align: center;
+  font-size: 50px;
+  color: #f4f4f4;
+  text-shadow: #000000 0px 0px 2px;
+}
+
+/*.center-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -60%);
+}*/
+@media (max-width: 952px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #d81d25;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover, a.active {
+    background: none;
+    color: #FABD00;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+
+/*Nest Hub*/ /*Needs more work to it*?/
+@media (max-width: 1030px) {
+  .center, .h1 {
+    font-size: 40px;
+  }
+
+  .center {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*Ipad pro*/
+@media (max-width: 1050px) {
+  .center, .h1 {
+    font-size: 40px;
+  }
+
+  .center {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*Surface*/
+
+@media (max-width: 920px) {
+  .center, .h1 {
+    font-size: 45px;
+  }
+
+  .center {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*Ipad*/
+
+@media (max-width: 830px) {
+  .center, .h1 {
+    font-size: 40px;
+  }
+
+  .center {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*Ipad*/
+
+@media (max-width: 800px) {
+  .center, .h1 {
+    font-size: 40px;
+  }
+
+  .center {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*
+
+/*Iphone*/
+@media (max-width: 500px) {
+  .center, .h1 {
+    font-size: 30px;
+  }
+
+  .center {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*Iphone
+@media (max-width: 30px) {
+
+  {
+
+  }
+  .center, .h1 {
+    font-size: 30px;
+  }
+
+  .center {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}*/
