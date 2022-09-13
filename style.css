@@ -147,18 +147,33 @@ section {
 article {
   margin: 10px;
   flex: 1 300px;
+  align-items: space-between;
 }
 
+article:nth-child(2), article:nth-child(4) {
+  flex: 1 300px;
+}
 
-
-.project-container {
+/*.project-container {
   margin: 10px;
   padding: 10px;
+}*/
+
+/*.project-container {
+  margin: 70px;
+  padding: 70px;
+}*/
+
+.project-container {
+  margin: 100px;
+  padding: 80px;
 }
 
 .project {
   color: #f4f4f4;
   text-shadow: #000000 0px 0px 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .project, h4, p {
@@ -173,7 +188,13 @@ article {
   font-size: 20px;
 }
 
-/*
+.project-btn {
+  margin-top: 20px;
+  margin-left: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .project-btn {
   margin-top: 20px;
@@ -184,34 +205,34 @@ article {
   font-size: 20px;
   padding: 10px;
   border-radius: 8px;
-  width: 100%;
   margin-top: 8px;
   margin-bottom: 10px;
+  /*flex: 1 auto;*/
 }
 
 .demo-btn {
   font-size: 20px;
   padding: 10px;
   border-radius: 8px;
-  width: 100%;
   margin-top: 8px;
   margin-bottom: 10px;
+ /* flex: 1 auto;*/
 }
 
 .code-btn:hover {
   background: #FABD00;
   color: #f4f4f4;
   text-shadow: #000000 0px 0px 2px;
-  font- transition: .5s;
+  font-transition: .5s;
 }
 
 .demo-btn:hover {
   background: #d81d25;
   color: #f4f4f4;
   text-shadow: #000000 0px 0px 2px;
-  font- transition: .5s;
+  font-transition: .5s;
 }
-*/
+
 /*Mobile Projects end*/
 /*About me*/
 .bio {
@@ -237,7 +258,8 @@ article {
 /*About me end*/
 /*Contact me*/
 form {
-  max-width: 420px;
+  /*max-width: 420px;*/
+  max-width: 700px;
   margin: 50px auto;
 }
 
@@ -437,8 +459,20 @@ textarea {
   }
 }
 
-/*Ipad*/
+/*Ipad 800px*/
+@media (max-width: 980px) {
+  .project-container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
 @media (max-width: 800px) {
+  .project-container {
+    margin: 10px;
+    padding: 10px;
+  }
+
   .center, .h1 {
     font-size: 40px;
   }
@@ -467,9 +501,17 @@ textarea {
   }
 }
 
-@media (max-width: 600px) {
 
-  /*Mobile Projects*/
+
+@media (max-width: 600px) {
+  section {
+    display: block;
+  }
+
+  article {
+    display: block;
+  }
+
   .project-container {
     margin: 10px;
     padding: 10px;
@@ -519,14 +561,14 @@ textarea {
     background: #FABD00;
     color: #f4f4f4;
     text-shadow: #000000 0px 0px 2px;
-    font- transition: .5s;
+    font-transition: .5s;
   }
 
   .demo-btn:hover {
     background: #d81d25;
     color: #f4f4f4;
     text-shadow: #000000 0px 0px 2px;
-    font- transition: .5s;
+    font-transition: .5s;
   }
 
   .border-project {
@@ -544,5 +586,4 @@ textarea {
     border-image: linear-gradient(to left, #f4f4f4, #f4f4f4) 1 0;
   }
 
-  /*Mobile Projects end*/
 }
