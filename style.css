@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #AE151C;
 }
