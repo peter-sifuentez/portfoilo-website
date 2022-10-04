@@ -1,17 +1,15 @@
-//console.log("--");
-//console.log("Sup");
+const 
 
-let Peter, Jessica
+navbar = document.querySelector("label"),
+links = document.querySelectorAll(".menu-link");
+console.log(links);
 
-Peter = "Happy";
-Jessica = "Happy";
+navbar.addEventListener("click", function(e) {
+    this.classList.toggle("is-open");
+    navbar.classList.toggle("is-open");
+});
 
-Peter + Jessica = "Happness"; //I love you mi Amor 
-
-//Shopping cart 
-
-//cart_1
-const item1 = 25;
-const item2 = 50;
-const item3 = 100;
-let total = item1 + item2 + item3; //total items in cart_1
+links.forEach(el => el.addEventListener("click", function (e) {
+    navbar.classList.toggle("is-open");
+   
+}));
