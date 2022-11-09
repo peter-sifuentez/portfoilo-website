@@ -1,4 +1,3 @@
-
 * {
   font-family: 'Germania One', cursive;
   padding: 0;
@@ -17,6 +16,18 @@ body {
 
 .logo {
   margin-left: 20px;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24;
+}
+
+.nav-link{
+  transition: 0.7s ease;
 }
 
 nav {
@@ -51,19 +62,20 @@ nav ul li a {
   border-radius: 3px;
 }
 
-.checkbtn {
-  font-size: 30px;
-  color: #f4f4f4;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
+.hamburger{
   display: none;
+  cursor: pointer;
 }
 
-#check {
-  display: none;
-}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #f4f4f4;
+}  
 
 a.active, a:hover {
   color: #FABD00;
@@ -112,20 +124,6 @@ a.active, a:hover {
   display: none;
 }
 
-/*End of Home page*/
-/*.heading, .h2 {*/
-/*border-top: 5px ridge #f4f4f4;
-  border-top: 5px ridge #f4f4f4;
-  border-bottom: 5px ridge #f4f4f4;
-  border-radius: 5px;
-  padding: 15px;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  text-align: center;
-  font-size: 50px;
-  color: #f4f4f4;
-  text-shadow: #000000 0px 0px 2px;
-}*/
 /*Heading*/
 .border {
   margin-top: 80px;
@@ -158,16 +156,6 @@ article {
 article:nth-child(2), article:nth-child(4) {
   flex: 1 300px;
 }
-
-/*.project-container {
-  margin: 10px;
-  padding: 10px;
-}*/
-
-/*.project-container {
-  margin: 70px;
-  padding: 70px;
-}*/
 
 .project-container {
   margin: 100px;
@@ -346,25 +334,39 @@ textarea {
   border-image: linear-gradient(to left, #f4f4f4, #f4f4f4) 1 0;
 }
 
-/*.social:hover {
-  opacity: 0.7;
-}*/
-/*a.active, .code-btn a:hover {
-  color: #d81d25;
-  transition: .5s;
-}*/
-/*.heading, .h2 {
-  border: 5px ridge #f4f4f4;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 80px;
-  margin-left: 20px;
-  margin-right: 20px;
-  text-align: center;
-  font-size: 50px;
-  color: #f4f4f4;
-  text-shadow: #000000 0px 0px 2px;
-}*/
+@media(max-width:768px){
+  .hamburger{
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #AE151C;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item{
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
 
 @media (max-width: 952px) {
   nav ul li a {
@@ -408,22 +410,6 @@ textarea {
   }
 }
 
-/*Nest Hub*/
-/*Needs more work to it*?/
-@media (max-width: 1030px) {
-  .center, .h1 {
-    font-size: 40px;
-  }
-
-  .center {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-/*Surface*/
 @media (max-width: 920px) {
   .center, .h1 {
     font-size: 45px;
@@ -501,8 +487,6 @@ textarea {
   }
 }
 
-/*
-
 /*Mobile*/
 @media (max-width: 500px) {
   .center, .h1 {
@@ -516,8 +500,6 @@ textarea {
     transform: translate(-50%, -50%);
   }
 }
-
-
 
 @media (max-width: 600px) {
   section {
