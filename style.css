@@ -15,7 +15,7 @@ body {
 }
 
 .logo {
-  margin-left: 20px;
+  margin-left: 23px;
 }
 
 .navbar {
@@ -72,6 +72,7 @@ nav ul li a {
   width: 25px;
   height: 3px;
   margin: 5px auto;
+  margin-right: 30px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #f4f4f4;
